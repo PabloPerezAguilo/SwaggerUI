@@ -87,6 +87,18 @@
               window.authorizations.add("key", new ApiKeyAuthorization("Authorization", "Basic "+auth, "header"));
               window.swaggerUi.load();
               break;
+            case "pablo":
+              rol = "Moderador";
+              auth = "cGFibG86cGFibG8=";
+              window.authorizations.add("key", new ApiKeyAuthorization("Authorization", "Basic "+auth, "header"));
+              window.swaggerUi.load();
+              break;
+            case "admin":
+              rol = "Administrador";
+              auth = "YWRtaW46YWRtaW4=";
+              window.authorizations.add("key", new ApiKeyAuthorization("Authorization", "Basic "+auth, "header"));
+              window.swaggerUi.load();
+              break;
         }
       document.getElementById("cosas").innerHTML = rol; });
     
@@ -108,7 +120,9 @@
     <option value="jose">Jose</option>
     <option value="omar">Omar</option>
     <option value="carlos">Carlos</option>
+    <option value="pablo">Pablo</option>
     <option value="jessi">Jessi</option>
+    <option value="admin">Admin</option>
   </select>
 <div id="cosas"></div>
   <div class="swagger-ui-wrap">
